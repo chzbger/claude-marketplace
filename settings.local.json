@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit",
+      "Write",
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash(*)",
+      "WebSearch",
+      "mcp__browsermcp__*"
+    ]
+  }
+}

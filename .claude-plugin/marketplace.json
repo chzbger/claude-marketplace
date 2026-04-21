@@ -1,0 +1,16 @@
+{
+  "name": "claude-marketplace",
+  "owner": {
+    "name": "W S"
+  },
+  "plugins": [
+    {
+      "name": "notify",
+      "source": "./plugins/notify",
+      "description": "Windows desktop notifications (BurntToast + WPF on secondary monitor) for Claude Code Stop and permission-prompt events",
+      "version": "1.0.0",
+      "category": "notifications",
+      "keywords": ["notification", "windows", "toast", "burnttoast"]
+    }
+  ]
+}
