@@ -1,0 +1,9 @@
+{
+  "name": "notify",
+  "version": "1.0.0",
+  "description": "Windows desktop notifications for Claude Code. Shows a BurntToast on the primary monitor and a custom WPF toast on the secondary monitor when Claude finishes a response or requests a permission prompt.",
+  "author": {
+    "name": "my"
+  },
+  "keywords": ["notification", "windows", "toast", "powershell"]
+}
