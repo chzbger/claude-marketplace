@@ -9,13 +9,22 @@ Personal Claude Code plugin marketplace.
 ├── .claude-plugin/
 │   └── marketplace.json          # marketplace manifest
 └── plugins/
-    └── notify/                   # Windows desktop notifications
+    ├── notify/                   # Windows desktop notifications
+    │   ├── .claude-plugin/
+    │   │   └── plugin.json
+    │   ├── hooks/
+    │   │   └── hooks.json        # Notification + Stop hooks
+    │   └── scripts/
+    │       └── notify.ps1
+    └── andrej-karpathy-rules/    # Coding behavior guidelines
         ├── .claude-plugin/
         │   └── plugin.json
         ├── hooks/
-        │   └── hooks.json        # Notification + Stop hooks
+        │   └── hooks.json        # SessionStart hook
+        ├── rules/
+        │   └── conventions.md    # The actual guideline text (edit this)
         └── scripts/
-            └── notify.ps1
+            └── inject.js         # Cross-platform Node.js
 ```
 
 ## Plugins
@@ -26,18 +35,19 @@ Windows desktop notifications on `Stop` (response finished) and `Notification` w
 
 **Requirements:** Windows, PowerShell, [BurntToast](https://github.com/Windos/BurntToast) module (`Install-Module BurntToast`).
 
+### `andrej-karpathy-rules`
+
+Andrej Karpathy-style behavioral guidelines (think-before-coding, simplicity-first, surgical changes, goal-driven execution). A `SessionStart` hook injects `rules/conventions.md` into the session as additional context — same effect as a `CLAUDE.md` but distributed and versioned through the marketplace.
+
+To update the guidelines for the whole team: edit `rules/conventions.md`, bump `version` in both `plugin.json` and `marketplace.json`, push, and team members run `/plugin update`.
+
+**Requirements:** Node.js (`node` on PATH). Cross-platform — works on Windows, macOS, and Linux.
+
+Source for the guideline text: <https://github.com/forrestchang/andrej-karpathy-skills>
+
 ## Install
-
-Add this marketplace and install a plugin from it:
-
-```
-/plugin marketplace add C:/00wj/src/my/claude-marketplace
-/plugin install notify@claude-marketplace
-```
-
-Or from GitHub once published:
 
 ```
 /plugin marketplace add <owner>/<repo>
-/plugin install notify@claude-marketplace
+/plugin install <plugin-name>@claude-marketplace
 ```

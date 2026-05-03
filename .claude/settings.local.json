@@ -11,7 +11,8 @@
       "WebFetch(*)",
       "Task(*)",
       "NotebookEdit(*)",
-      "Bash(git mv *)"
+      "Skill(update-config)",
+      "mcp__browsermcp__*"
     ]
   }
 }

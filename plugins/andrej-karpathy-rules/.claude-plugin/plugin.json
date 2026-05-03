@@ -1,0 +1,9 @@
+{
+  "name": "andrej-karpathy-rules",
+  "version": "1.0.1",
+  "description": "Andrej Karpathy-style behavioral guidelines for coding tasks. Injected once per session via SessionStart hook so it behaves like a CLAUDE.md but is distributed and versioned through the marketplace.",
+  "author": {
+    "name": "my"
+  },
+  "keywords": ["conventions", "guidelines", "coding-style", "session"]
+}

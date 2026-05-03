@@ -8,9 +8,17 @@
       "name": "notify",
       "source": "./plugins/notify",
       "description": "Windows desktop notifications (BurntToast + WPF on secondary monitor) for Claude Code Stop and permission-prompt events",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "notifications",
       "keywords": ["notification", "windows", "toast", "burnttoast"]
+    },
+    {
+      "name": "andrej-karpathy-rules",
+      "source": "./plugins/andrej-karpathy-rules",
+      "description": "Andrej Karpathy-style coding behavior guidelines, injected once per session via SessionStart hook (think-before-coding, simplicity-first, surgical changes, goal-driven execution)",
+      "version": "1.0.1",
+      "category": "conventions",
+      "keywords": ["conventions", "guidelines", "coding-style", "session"]
     }
   ]
 }
